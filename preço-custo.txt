@@ -1,0 +1,18 @@
+2) Carro novo. Custo de fábrica + porcentagem do distribuidor + imposto.
+Custo de fábrica  | % distribuidor | % imposto
+_____________________________________________________
+Até 12k           |  5             | isento
+Entre 12k e 25k   |  10            | 15
+Acima de 25k      |  15            | 20
+
+  Início
+    Real: Custo, Preco;
+    Leia(Custo);
+    Se Custo <= 12000 Então
+      Preco ← Custo * 1.05;
+    Se Custo > 12000 E Custo <= 15000 Então
+      Preço ← Custo * 1.25;
+    Se Custo > 25000 Então
+      Preço ← Custo 1.35;
+    Escreva(Preco);
+  Fim
