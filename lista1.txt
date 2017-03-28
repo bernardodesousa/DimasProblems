@@ -1,0 +1,267 @@
+Estrutura Sequencial
+
+1) Construa um algoritmo que receba o valor do salário mínimo e o valor do salário de um funcionário, calcule e mostre a quantidade de salários mínimos que ganha esse funcionário.
+
+  Início
+    Real: salario, minimo, razao;
+    leia(salario, minimo);
+    razao ← salario/minimo;
+    Escreva(razao);
+  Fim
+
+2) Construa um algoritmo que receba o ano de nascimento de uma pessoa e o ano atual, calcule e mostre:
+
+  • A idade dessa pessoa em anos;
+  • A idade dessa pessoa em meses;
+  • A idade dessa pessoa em dias;
+  • A idade dessa pessoa em semanas;
+
+  Início
+    Inteiro: anoNasc, anoAtual, anos, meses, dias, semanas;
+    Leia(anoNasc, anoAtual);
+
+    anos ← anoAtual - anoNasc;
+    meses ← anos * 12;
+    dias ← anos * 365;
+    semanas ← anos * 52;
+
+    Escreva(anos, meses, dias, semanas);
+  Fim
+
+3) João recebeu seu salário e precisa pagar duas contas que estão atrasadas. Como as contas estão atrasadas, João terá que pagar multa de 2% sobre cada conta. Construa um algoritmo que calcule e mostre quanto restará do salário do João.
+
+  Início
+    Real: salario, conta1, conta2;
+    Leia(salario, conta1, conta2);
+    salario ← salario - conta1 * 1.02 - conta2 * 1.02;
+    Escreva(salario);
+  Fim
+
+4) Construa um algoritmo que receba uma temperatura em Celsius, calcule e mostre essa temperatura em Fahrenheit. Considere que: F = 1,8 x (C + 32).
+
+  Início
+    Real: c, f;
+    Leia(c);
+    f ← (c+32) * 1.8;
+    Escreva(f);
+  Fim
+
+5) Construa um algoritmo que receba a quantidade em dinheiro em reais que uma pessoa que vai viajar possui. Essa pessoa vai passar por vários países e precisa converter seu dinheiro em dólares, marco alemão e libra esterlina. Sabe-se que a cotação do dólar é de R$ 3,20, do marco alemão é de R$ 2,85 e da libra esterlina é de R$ 3,55. O algoritmo deve fazer as conversões e mostrá-las.
+
+  Início
+    Real: r, d, m, l;
+    Leia(r);
+    d ← r / 3.2;
+    m ← r / 2.85;
+    l ← r / 3.55;
+    Escreva(d, m, l);
+  Fim
+
+6) Construa um algoritmo que receba o número de horas trabalhadas, o valor do salário mínimo e o número de horas extras trabalhadas. Calcule e mostre o salário a receber seguindo as regras:
+
+  • a hora trabalhada vale 1/8 do salário mínimo;
+  • a hora extra vale ¼ do salário mínimo;
+  • o salário bruto equivale ao número de horas trabalhadas multiplicado pelo valor da hora trabalhada;
+  • a quantia a receber pelas horas extras equivale ao número de horas extras trabalhadas multiplicado pelo valor da hora extra;
+  • o salário a receber equivale ao salário bruto mais a quantia a receber pelas horas extras.
+
+  Início
+    Real: hTrab, min, hExt, sal;
+    Leia(hTrab, min, hExt);
+    sal ← (hTrab * min / 8) + (hExt * min / 4);
+    Escreva(sal);
+  Fim
+
+Estrutura Condicional
+
+1) Escreva um algoritmo que leia um número e o imprima caso ele seja maior que 20.
+
+  Início
+    Real: n;
+    Leia(n);
+    Se n > 20 Então
+      Escreva(n);
+  Fim
+
+2) Escreva um algoritmo para determinar se um dado número N (recebido através do teclado) é POSITIVO, NEGATIVO ou NULO (igual a zero).
+
+  Início
+    Real: n;
+    Leia(n);
+    Se n > 0 Então
+      Escreva("POSITIVO");
+    Se n < 0 Então
+      Escreva("NEGATIVO");
+    Se n = 0 Então
+      Escreva("NULO");
+  Fim
+
+3) Escreva um algoritmo que receba um número e imprima uma das mensagens: “é múltiplo de 3” ou “não é múltiplo de 3”.
+
+  Início
+    Inteiro: n;
+    Leia(n);
+    Se n mod 3 = 0 Então
+      Escreva("é múltiplo de 3");
+    Senão
+      Escreva("não é múltiplo de 3");
+  Fim
+
+4) A prefeitura de Rancho Fundo abriu uma linha de crédito para seus funcionários. O valor máximo da prestação não poderá ultrapassar 30% do salário bruto. Fazer um algoritmo que permita entrar com o salário bruto e o valor da prestação, e informar se o empréstimo pode ou não ser concedido.
+
+  Início
+    Real: s, p;
+    Leia(s, p);
+    Se p <= s * 0.3 Então
+      Escreva("Pode conceder o empréstimo! :D")
+    Senão
+      Escreva("Prestação alta demais ou salário baixo demais... :(")
+  Fim
+
+5) Construa um algoritmo que receba o Código do Funcionário e o Número de Horas Trabalhadas. O código do funcionário deve constar de 4 dígitos onde o primeiro dígito corresponde ao setor do funcionário e os três últimos correspondem ao número do funcionário. Exemplo: 3452 indica que o funcionário 452 pertence ao setor 3. (Utilize o recurso da divisão inteira para obter o setor do funcionário). Após a entrada de dados, calcule e exiba o salário do funcionário. Considere que :
+
+  • Salário = Horas Trabalhadas X Valor Hora Trabalhada
+  • Se a quantidade de Horas Trabalhadas for maior que 400, o funcionário recebe 10% a mais no Valor da Hora Trabalhada por hora excedente.
+  • O Valor da Hora Trabalhada depende do código do setor do funcionário, sendo que :
+    - Setor 1 : Valor Hora Trabalhada R$ 7,80
+    - Setor 2 : Valor Hora Trabalhada R$ 11,50
+    - Setor 3 : Valor Hora Trabalhada R$ 18,25
+
+  Início
+    Inteiro: cod, setor, id;
+    Real: horas, sal, faixa1, faixa2;
+    Leia(cod, horas);
+    setor ← cod div 1000;
+    id ← cod mod 1000;
+    faixa1 ← horas;
+    faixa2 ← 0;
+
+    Se horas > 400 Então
+    Início
+      faixa1 ← 400;
+      faixa2 ← horas - 400;
+    Fim
+
+    Se setor = 1 Então
+      sal ← faixa1 * 7.8 + faixa2 * 8.58;
+    Se setor = 2 Então
+      sal ← faixa1 * 11.5 + faixa2 * 12.65;
+    Se setor = 3 Então
+      sal ← faixa1 * 18.25 + faixa2 * 20,075;
+
+    Escreva(sal);
+
+  Fim
+
+6) Construa um algoritmo para determinar se uma pessoa está de acordo com IMC (Índice de Massa Corpórea), que é definido como sendo a relação entre a massa (MASSA) e o quadrado da Altura (ALTURA) do indivíduo, ou seja, IMC=MASSA/ALTURA^2.
+
+  Início
+    Real: m, a, i;
+    Leia(m, a);
+    i ← m / a * a;
+    Se i < 20 Então
+      Escreva("Abaixo do peso");
+    Se i >= 10 E i < 25 Então
+      Escreva("Peso Normal");
+    Se i >= 25 E i < 30 Então
+      Escreva("Sobre Peso");
+    Se i >= 30 E i < 40 Então
+      Escreva("Obeso");
+    Se i >= 40 Então
+      Escreva("Obeso Mórbido");
+  Fim
+
+7) A CEF concederá um crédito especial com juros de 2% aos seus clientes de acordo com o saldo médio no último ano. Construa um algoritmo que leia o saldo médio de um cliente e calcule o valor do crédito de acordo com a tabela abaixo. Faça a exibição do saldo médio e do valor de crédito.
+
+  Média de Saldo |  Crédito
+Abaixo de 1000   | R$ 0,00
+A partir de 1000 | R$ 10 000,00
+Acima de 2000    | R$ 20 000,00
+
+
+  Início
+    Real: sMedio, credito;
+    Leia(sMedio);
+    credito ← 0;
+    Se sMedio >= 1000 Então
+      credito ← 10000;
+    Se sMedio >= 2000 Então
+      credito ← 20000;
+    Escreva(credito);
+  Fim
+
+8) Construa um algoritmo que a partir da idade de uma pessoa, determine sua classificação de acordos com os critérios abaixo:
+
+  • maior de idade
+  • menor de idade
+  • pessoa idosa (idade superior ou igual a 65 anos).
+
+  Início
+    Real: i;
+    Leia(i);
+    Se i >= 65 Então
+      Escreva("pessoa idosa");
+    Se i >= 18 E i < 65 Então
+      Escreva ("maior de idade");
+    Se i < 18 Então
+      Escreva ("menor de idade");
+  Fim
+
+9) Crie um algoritmo que leia a idade de uma pessoa e informe a sua classe eleitoral:
+
+  • não eleitor (abaixo de 16 anos)
+  • eleitor obrigatório (entre 18 e 65 anos)
+  • eleitor facultativo (de 16 até 18 anos e maior de 65 anos, inclusive)
+
+  Início
+    Real: i;
+    Leia(i);
+    Se i < 16 Então
+      Escreva("não eleitor");
+    Se i >= 16 E i < 18 OU i >= 65 Então
+      Escreva("eleitor facultativo");
+    Se i >= 18 E i < 65 Então
+      Escreva("eleitor obrigatório");
+  Fim
+
+10) Criar um algoritmo que a partir da idade e massa do paciente calcule a dosagem de determinado medicamento e exiba a receita informando quantas gotas do medicamento o paciente deve tomar por dose. Considere que o medicamento em questão possui 500 mg por ml, e que cada ml corresponde a 20 gotas.
+
+  • Adultos ou adolescentes desde 12 anos, inclusive, se tiverem massa igual ou acima de 60 quilos devem tomar 1000 mg; com massa abaixo de 60 quilos devem tomar 875 mg.
+  • Para crianças e adolescentes abaixo de 12 anos a dosagem é calculada pela massa corpórea conforme a tabela a seguir:
+
+Massa em kg | Dosagem em mg
+5 a 9       |   125
+9.1 a 16    |   250
+16.1 a 24   |   375
+24.1 a 30   |   500
+Acima de 30 |   750
+
+25 mg / gota
+
+  Início
+    Real: massa, idade;
+    Inteiro: gotas;
+    Leia(massa, idade);
+
+    Se idade >= 12 E massa >= 60 Então
+      gotas ← 40;
+    Se idade >=12 E massa < 60 Então
+      gotas ← 35;
+    Se idade < 12 Então
+    Início
+      Se massa >= 5 Então
+        gotas ← 5;
+      Se massa > 9 Então
+        gotas ← 10;
+      Se massa > 16 Então
+        gotas ← 15;
+      Se massa > 24 Então
+        gotas ← 20;
+      Se massa > 30 Então
+        gotas ← 30;
+    Fim
+
+    Escreva(gotas);
+  Fim
+
+---
