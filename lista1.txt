@@ -1,4 +1,4 @@
-Estrutura Sequencial
+﻿Estrutura Sequencial
 
 1) Construa um algoritmo que receba o valor do salário mínimo e o valor do salário de um funcionário, calcule e mostre a quantidade de salários mínimos que ganha esse funcionário.
 
@@ -7,6 +7,13 @@ Estrutura Sequencial
     leia(salario, minimo);
     razao ← salario/minimo;
     Escreva(razao);
+  Fim
+
+  Início\n
+    \tReal: salario, minimo, razao;\n
+    \tleia(salario, minimo);\n
+    \trazao ← salario/minimo;\n
+    \tEscreva(razao);\n
   Fim
 
 2) Construa um algoritmo que receba o ano de nascimento de uma pessoa e o ano atual, calcule e mostre:
@@ -228,15 +235,36 @@ Acima de 2000    | R$ 20 000,00
 
   • Adultos ou adolescentes desde 12 anos, inclusive, se tiverem massa igual ou acima de 60 quilos devem tomar 1000 mg; com massa abaixo de 60 quilos devem tomar 875 mg.
   • Para crianças e adolescentes abaixo de 12 anos a dosagem é calculada pela massa corpórea conforme a tabela a seguir:
+_Massa_em_kg_|_Dosagem_em_mg_
+5 a 9        |   125
+9.1 a 16     |   250
+16.1 a 24    |   375
+24.1 a 30    |   500
+Acima de 30  |   750
 
-Massa em kg | Dosagem em mg
-5 a 9       |   125
-9.1 a 16    |   250
-16.1 a 24   |   375
-24.1 a 30   |   500
-Acima de 30 |   750
 
-25 mg / gota
+Solução proposta
+
+500 mg = 1 ml
+20 gotas = 1 ml
+
+20 gotas = 500 mg
+1 gota = 500mg/20
+1 gota = 25 mg
+
+Hardcode the values for efficiency
+
+_mg__|____gotas_____
+125  |  125/25 = 5
+250  |  250/25 = 10
+375  |  375/25 = 15
+500  |  500/25 = 20
+750  |  750/25 = 30
+875  |  875/25 = 35
+1000 | 1000/25 = 40
+____________________
+
+
 
   Início
     Real: massa, idade;

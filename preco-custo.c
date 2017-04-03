@@ -9,10 +9,12 @@ int main(){
   scanf("%f", &Custo);
   if (Custo < 12000)
     Preco = Custo * 1.05;
-  if (Custo >= 12000 && Custo < 15000)
+  else if (Custo >= 12000 && Custo < 15000)
     Preco = Custo * 1.25;
-  if (Custo >= 25000)
+  else if (Custo >= 25000)
     Preco = Custo * 1.35;
+  else
+    printf("%ls", L"ERRO");
   printf("%ls", L"Preço final: R$");
   printf("%10.2f", Preco);
 
