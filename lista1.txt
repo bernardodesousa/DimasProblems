@@ -9,13 +9,6 @@
     Escreva(razao);
   Fim
 
-  Início\n
-    \tReal: salario, minimo, razao;\n
-    \tleia(salario, minimo);\n
-    \trazao ← salario/minimo;\n
-    \tEscreva(razao);\n
-  Fim
-
 2) Construa um algoritmo que receba o ano de nascimento de uma pessoa e o ano atual, calcule e mostre:
 
   • A idade dessa pessoa em anos;
