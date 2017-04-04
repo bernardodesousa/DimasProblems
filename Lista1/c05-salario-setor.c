@@ -8,11 +8,10 @@
 //     - Setor 3 : Valor Hora Trabalhada R$ 18,25
 //
 //   Início
-//     Inteiro: cod, setor, id;
+//     Inteiro: cod, setor;
 //     Real: horas, sal, faixa1, faixa2;
 //     Leia(cod, horas);
 //     setor ← cod div 1000;
-//     id ← cod mod 1000;
 //     faixa1 ← horas;
 //     faixa2 ← 0;
 //
@@ -40,7 +39,7 @@
 int main(){
   setlocale(LC_ALL, "");
   int setor;
-  long cod, id;
+  long cod;
   float horas, sal, faixa1, faixa2;
   printf("%ls", L"Informe o código do funcionário: ");
   scanf("%ld", &cod);
@@ -48,7 +47,6 @@ int main(){
   scanf("%f", &horas);
 
   setor = cod / 1000;
-  id = cod % 1000;
   faixa1 = horas;
   faixa2 = 0;
 

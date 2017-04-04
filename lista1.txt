@@ -128,10 +128,9 @@ Estrutura Condicional
     - Setor 3 : Valor Hora Trabalhada R$ 18,25
 
   Início
-    Inteiro: cod, setor, id;
+    Inteiro: cod, setor;
     Real: horas, sal, faixa1, faixa2;
     Leia(cod, horas);
-    setor ← cod div 1000;
     id ← cod mod 1000;
     faixa1 ← horas;
     faixa2 ← 0;
