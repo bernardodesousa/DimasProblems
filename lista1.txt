@@ -158,7 +158,7 @@ Estrutura Condicional
   Início
     Real: m, a, i;
     Leia(m, a);
-    i ← m / a * a;
+    i ← m / (a * a);
     Se i < 20 Então
       Escreva("Abaixo do peso");
     Se i >= 10 E i < 25 Então
@@ -183,9 +183,9 @@ Acima de 2000    | R$ 20 000,00
     Real: sMedio, credito;
     Leia(sMedio);
     credito ← 0;
-    Se sMedio >= 1000 Então
+    Se sMedio >= 1000 < 2000 Então
       credito ← 10000;
-    Se sMedio >= 2000 Então
+    Senão Se sMedio >= 2000 Então
       credito ← 20000;
     Escreva(credito);
   Fim
@@ -203,7 +203,7 @@ Acima de 2000    | R$ 20 000,00
       Escreva("pessoa idosa");
     Se i >= 18 E i < 65 Então
       Escreva ("maior de idade");
-    Se i < 18 Então
+    Se i < 18 E i >= 0 Então
       Escreva ("menor de idade");
   Fim
 
@@ -228,6 +228,7 @@ Acima de 2000    | R$ 20 000,00
 
   • Adultos ou adolescentes desde 12 anos, inclusive, se tiverem massa igual ou acima de 60 quilos devem tomar 1000 mg; com massa abaixo de 60 quilos devem tomar 875 mg.
   • Para crianças e adolescentes abaixo de 12 anos a dosagem é calculada pela massa corpórea conforme a tabela a seguir:
+
 _Massa_em_kg_|_Dosagem_em_mg_
 5 a 9        |   125
 9.1 a 16     |   250
@@ -237,13 +238,6 @@ Acima de 30  |   750
 
 
 Solução proposta
-
-500 mg = 1 ml
-20 gotas = 1 ml
-
-20 gotas = 500 mg
-1 gota = 500mg/20
-1 gota = 25 mg
 
 Hardcode the values for efficiency
 
@@ -257,8 +251,6 @@ _mg__|____gotas_____
 1000 | 1000/25 = 40
 ____________________
 
-
-
   Início
     Real: massa, idade;
     Inteiro: gotas;
@@ -270,7 +262,7 @@ ____________________
       gotas ← 35;
     Se idade < 12 Então
     Início
-      Se massa >= 5 E massa < 9 Então
+      Se massa >= 5 E massa <= 9 Então
         gotas ← 5;
       Se massa > 9 E massa <= 16 Então
         gotas ← 10;
