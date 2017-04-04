@@ -270,13 +270,13 @@ ____________________
       gotas ← 35;
     Se idade < 12 Então
     Início
-      Se massa >= 5 Então
+      Se massa >= 5 E massa < 9 Então
         gotas ← 5;
-      Se massa > 9 Então
+      Se massa > 9 E massa <= 16 Então
         gotas ← 10;
-      Se massa > 16 Então
+      Se massa > 16 E massa <= 24 Então
         gotas ← 15;
-      Se massa > 24 Então
+      Se massa > 24 E massa <= 30 Então
         gotas ← 20;
       Se massa > 30 Então
         gotas ← 30;
